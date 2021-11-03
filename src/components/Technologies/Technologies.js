@@ -1,12 +1,63 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { DiAtlassian, DiCreativecommonsBadge, DiFirebase, DiJava, DiReact, DiScrum, DiZend } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
 const Technologies = () =>  (
-  <div>
-    Technologies
-  </div>
+    <Section nopadding id="tech">
+        <br/>
+        <SectionDivider />
+        <SectionTitle main> Tecnologías</SectionTitle>
+        <SectionText>
+            He trabajado como desarrollador por mas de 12 años tanto en front como back end. 
+        </SectionText>
+        <List>
+            <ListItem>
+                <DiReact size="3rem" />
+                <ListContainer>
+                    <ListTitle>Front-end</ListTitle>
+                    <ListParagraph>
+                        React.js <br/>
+                        Redux <br/>
+                    </ListParagraph>
+                </ListContainer>
+            </ListItem>
+            <ListItem>
+                <DiJava size="3rem" />
+                <ListContainer>
+                    <ListTitle>Backend</ListTitle>
+                    <ListParagraph>
+                        Groovy <br/>
+                        Grails <br/>
+                        Java <br/>
+                        Node.js <br/>
+                        Php <br/>
+                    </ListParagraph>
+                </ListContainer>
+            </ListItem>
+            <ListItem>
+                <DiAtlassian size="3rem" />
+                <ListContainer>
+                    <ListTitle>Atlassian tools</ListTitle>
+                    <ListParagraph>
+                        Administración de herramientas Atlassian<br/>
+                        Atlassian connect <br/>
+                    </ListParagraph>
+                </ListContainer>
+            </ListItem>
+            <ListItem>
+                <DiScrum size="3rem" />
+                <ListContainer>
+                    <ListTitle>Proyectos</ListTitle>
+                    <ListParagraph>
+                        Liderazgo de equipos <br/>
+                        Management de proyectos <br/>
+                        Metodologías ágiles (Scrum y Kanban) <br/>
+                    </ListParagraph> 
+                </ListContainer>
+            </ListItem>
+        </List>
+    </Section>
 );
 
 export default Technologies;
