@@ -18,7 +18,7 @@
     "styled-components": "^5.3.0",
     "styled-normalize": "^8.0.7"
   },
-  "homepage": ".",
+  "homepage": "https://jmibarra.github.io/portfolio-jmi",
   "devDependencies": {
     "babel-plugin-transform-define": "^2.0.1"
   }
