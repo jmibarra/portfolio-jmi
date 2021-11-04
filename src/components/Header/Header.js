@@ -8,7 +8,7 @@ import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './Heade
 const Header = () =>  (
     <Container>
         <Div1>
-            <Link href="/">
+            <Link href="/" as={ process.env.BACKEND_URL + '/'}>
                 <a style={{display: "flex", alignItems: "center", color: 'white', marginBottom:'20px'}}>
                     <DiCssdeck size="3rem" /> <Span >Portfolio</Span>
                 </a>
@@ -16,7 +16,7 @@ const Header = () =>  (
         </Div1>
         <Div2>
             <li>
-                <Link href="#projects">
+                <Link href="#projects" as={ process.env.BACKEND_URL + '#projects'}>
                     <NavLink> Proyectos </NavLink>
                 </Link>
             </li>
