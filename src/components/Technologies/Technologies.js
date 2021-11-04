@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiAtlassian, DiCreativecommonsBadge, DiFirebase, DiJava, DiReact, DiScrum, DiZend } from 'react-icons/di';
+import { DiAtlassian, DiCreativecommonsBadge, DiDatabase, DiFirebase, DiJava, DiReact, DiScrum, DiZend } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -53,6 +53,18 @@ const Technologies = () =>  (
                         Liderazgo de equipos <br/>
                         Management de proyectos <br/>
                         Metodologías ágiles (Scrum y Kanban) <br/>
+                    </ListParagraph> 
+                </ListContainer>
+            </ListItem>
+            <ListItem>
+                <DiDatabase size="3rem" />
+                <ListContainer>
+                    <ListTitle>Base de datos</ListTitle>
+                    <ListParagraph>
+                        Firebase <br/>
+                        MySQL <br/>
+                        SQL Server <br/>
+                        MongoDB <br/>
                     </ListParagraph> 
                 </ListContainer>
             </ListItem>

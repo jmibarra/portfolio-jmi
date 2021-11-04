@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterSquare } from 'react-icons/ai';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillMediumSquare, AiFillTwitterSquare } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
@@ -26,11 +26,6 @@ const Header = () =>  (
                 </Link>
             </li>
             <li>
-                <Link href="#articles">
-                    <NavLink> Artículos </NavLink>
-                </Link>
-            </li>
-            <li>
                 <Link href="#about">
                     <NavLink> About </NavLink>
                 </Link>
@@ -45,6 +40,9 @@ const Header = () =>  (
             </SocialIcons>
             <SocialIcons href="https://twitter.com/jibarradev">
                 <AiFillTwitterSquare size="3rem" />
+            </SocialIcons>
+            <SocialIcons href="https://jmibarra86.medium.com/">
+                <AiFillMediumSquare size="3rem" />
             </SocialIcons>
         </Div3>
     </Container>
