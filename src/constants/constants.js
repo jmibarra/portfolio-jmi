@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Mis artículos',
     description: "Mis artículos en Medium sobre desarrollo, metodologías y técnicas de productividad",
-      image: '/images/medium.jpeg',
+      image: 'images/medium.jpeg',
       tags: ['Desarrollo', 'Productividad'],
     source: '',
     visit: 'https://google.com',
@@ -11,7 +11,7 @@ export const projects = [
   {
     title: 'Portfolio',
     description:"Sitio web en React.js de portfolio personal de proyectos y experiencia",
-    image: '/images/portfolio.png',
+    image: 'images/portfolio.png',
     tags: ['React', 'JavaScript','Next.js'],
     source: '',
     visit: 'https://github.com/jmibarra/portfolio-jmi',
@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Gastos App',
     description: "Mi primera aplicación en Reac.js, aplicación para la gestión de gastos personales.",
-      image: '/images/gastos-app.png',
+      image: 'images/gastos-app.png',
       tags: ['React', 'Redux', 'Firebase'],
     source: '',
     visit: 'https://github.com/jmibarra/gastos-app',
@@ -29,7 +29,7 @@ export const projects = [
   {
     title: 'Mis otros proyectos',
     description: "Podes ver mi repositorío con mis otros proyectos",
-    image: '/images/all-projects.png',
+    image: 'images/all-projects.png',
     tags: ['React','React native', 'Redux', 'Firebase', 'Etc.'],
     source: 'https://github.com/jmibarra',
     visit: 'https://github.com/jmibarra',
