@@ -31,6 +31,7 @@ const Technologies = () =>  (
                         Grails <br/>
                         Java <br/>
                         Node.js <br/>
+                        Python <br/>
                         Php <br/>
                     </ListParagraph>
                 </ListContainer>
