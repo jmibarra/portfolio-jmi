@@ -41,8 +41,9 @@ const Technologies = () =>  (
                 <ListContainer>
                     <ListTitle>Atlassian tools</ListTitle>
                     <ListParagraph>
-                        Administración de herramientas Atlassian<br/>
+                        Administración de herramientas de la suite Atlassian<br/>
                         Atlassian connect <br/>
+                        Atlassian Forge <br/>
                     </ListParagraph>
                 </ListContainer>
             </ListItem>

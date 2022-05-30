@@ -9,28 +9,10 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Portfolio',
-    description:"Sitio web en React.js de portfolio personal de proyectos y experiencia",
-    image: 'images/portfolio.png',
-    tags: ['React', 'JavaScript','Next.js'],
-    source: 'https://github.com/jmibarra/portfolio-jmi',
-    visit: 'https://github.com/jmibarra/portfolio-jmi',
-    id: 1,
-  },
-  {
-    title: 'Gastos App',
-    description: "Mi primera aplicación en Reac.js, aplicación para la gestión de gastos personales.",
-      image: 'images/gastos-app.png',
-      tags: ['React', 'Redux', 'Firebase'],
-    source: 'https://github.com/jmibarra/gastos-app',
-    visit: 'https://github.com/jmibarra/gastos-app',
-    id: 2,
-  },
-  {
-    title: 'Mis otros proyectos',
-    description: "Podes ver mi repositorío con mis otros proyectos",
+    title: 'Mis proyectos',
+    description: "Podes ver mi repositorío con mis proyectos",
     image: 'images/all-projects.png',
-    tags: ['React','React native', 'Redux', 'Firebase', 'Etc.'],
+    tags: ['React', 'Redux','Typescript','Python'],
     source: 'https://github.com/jmibarra',
     visit: 'https://github.com/jmibarra',
     id: 3,
@@ -47,7 +29,7 @@ export const TimeLineData = [
 
 export const AcomplishmentsData = [
     { number: 10, text: 'Años de experiencia en desarrollo'},
-    //{ number: 1000, text: 'Students', },
+    { number: '+50', text: 'Proyectos de transformación digital'},
     //{ number: 1900, text: 'Github Followers', },
     //{ number: 5000, text: 'Github Stars', }
   ];
