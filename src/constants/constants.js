@@ -1,22 +1,58 @@
 export const projects = [
   {
-    title: 'Mis artículos',
-    description: "Mis artículos en Medium sobre desarrollo, metodologías y técnicas de productividad",
-      image: 'images/medium.jpeg',
-      tags: ['Desarrollo', 'Productividad'],
-    source: 'https://jmibarra86.medium.com/',
-    visit: 'https://jmibarra86.medium.com/',
-    id: 0,
-  },
-  {
     title: 'Mis proyectos',
     description: "Podes ver mi repositorío con mis proyectos",
     image: 'images/all-projects.png',
     tags: ['React', 'Redux','Typescript','Python'],
     source: 'https://github.com/jmibarra',
     visit: 'https://github.com/jmibarra',
+    id: 0,
+  },
+  {
+    title: 'Atlassian Forge CSV Generator',
+    description: "Prueba de concepto para permitir generar reportes CSV descargables de Jira utilizando Atlassian Forge y react",
+    image: 'images/atlassian-forge.png',
+    tags: ['React', 'Atlassian Forge','javascript'],
+    source: 'https://github.com/jmibarra/forge-csv-generator-demo',
+    visit: 'https://github.com/jmibarra/forge-csv-generator-demo',
+    id: 1,
+  },
+  {
+    title: 'Portfolio personal',
+    description: "Pagina web en React con Next.js para presentar mi protfolio personal",
+    image: 'images/portfolio.png',
+    tags: ['React', 'Next Js','javascript'],
+    source: 'https://github.com/jmibarra/portfolio-jmi',
+    visit: 'https://github.com/jmibarra/portfolio-jmi',
+    id: 2,
+  },
+  {
+    title: 'Notas React',
+    description: "Web app sencilla para crear notas",
+    image: 'images/react-note-app.png',
+    tags: ['React','javascript'],
+    source: 'https://github.com/jmibarra/react-note-app',
+    visit: 'https://github.com/jmibarra/react-note-app',
     id: 3,
   },
+  {
+    title: 'Crypto finance react app',
+    description: "App para el seguimiento de valores de criptomonedas",
+    image: 'images/crypto-app.png',
+    tags: ['React','javascript', 'API'],
+    source: 'https://github.com/jmibarra/crypto-finance-tracker-app',
+    visit: 'https://github.com/jmibarra/crypto-finance-tracker-app',
+    id: 4,
+  },
+  {
+    title: 'Productivity App',
+    description: "App para manejo de pendientes, notas y hàbitos",
+    image: 'images/productivity-ts-app.png',
+    tags: ['React','Typescript', 'API'],
+    source: 'https://github.com/jmibarra/productivity-app-ts-project',
+    visit: 'https://github.com/jmibarra/productivity-app-ts-project',
+    id: 5,
+  }
 ];
 
 export const TimeLineData = [
