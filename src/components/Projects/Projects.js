@@ -21,7 +21,7 @@ const Projects = () => (
                     <div>
                         <TitleContent> Stack </TitleContent>
                         <TagList>
-                            {tags.map((tag, i) => (
+                            {tags.filter((tag, index) => index < 3).map((tag, i) => (
                                 <Tag key={i}>{tag}</Tag>
                             ))}
                         </TagList>

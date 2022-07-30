@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ArticlesStyles';
+import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
+import Button from '../../styles/GlobalComponents/Button';
 
-import { getRssFeed, RssFeed } from "../../services/medium-feed";
+import { getRssFeed } from "../../services/medium-feed";
 
 
 const Articles = () => {
@@ -23,7 +23,7 @@ const Articles = () => {
     return(
         <Section nopadding id="articles">
             <SectionDivider />
-            <SectionTitle main> Artículos </SectionTitle>
+            <SectionTitle main> Artículos recientes </SectionTitle>
             <GridContainer>
                 {rssFeed.articles.map(({title,thumbnail, link,guid,categories}) => (
                     <BlogCard key={guid}>
@@ -35,7 +35,7 @@ const Articles = () => {
                         { <div>
                             <TitleContent> Temas </TitleContent>
                             <TagList>
-                                {categories.map((tag, i) => (
+                                {categories.filter((tag, index) => index < 3).map((tag, i) => (
                                     <Tag key={i}>{tag}</Tag>
                                 ))}
                             </TagList>
@@ -48,7 +48,6 @@ const Articles = () => {
             </GridContainer>
         </Section>
     )
-
 }
 
 export default Articles;
