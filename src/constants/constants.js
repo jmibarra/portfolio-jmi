@@ -45,12 +45,12 @@ export const projects = [
     id: 4,
   },
   {
-    title: 'Productivity App',
-    description: "App para manejo de pendientes, notas y hàbitos",
-    image: 'images/productivity-ts-app.png',
-    tags: ['React','Typescript', 'API'],
-    source: 'https://github.com/jmibarra/productivity-app-ts-project',
-    visit: 'https://github.com/jmibarra/productivity-app-ts-project',
+    title: 'Mis Gastos App',
+    description: "Aplicación para el manejo de gastos personales",
+    image: 'images/gastos-app.png',
+    tags: ['React','Firebase', 'API'],
+    source: 'https://github.com/jmibarra/gastos-app',
+    visit: 'https://github.com/jmibarra/gastos-app',
     id: 5,
   }
 ];
