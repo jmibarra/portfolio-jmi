@@ -61,6 +61,15 @@ export const projects = [
         source: 'https://github.com/jmibarra/reinforcement-learning-ia-snake',
         visit: 'https://github.com/jmibarra/reinforcement-learning-ia-snake',
         id: 6,
+    },
+    {
+        title: 'SnakeIA - Reinforcement learning',
+        description: "Proyecto de implementación de algoritmos de machine learning que alimenta la serie de articulos \"Machine learning 101\"",
+        image: 'images/big-data-and-artificial-intelligenc.jpg',
+        tags: ['Python', 'Machine Learning', 'AI'],
+        source: 'https://github.com/jmibarra/machine-learning-practice-project',
+        visit: 'https://github.com/jmibarra/machine-learning-practice-project',
+        id: 6,
     }
 ];
 
