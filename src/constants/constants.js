@@ -83,7 +83,5 @@ export const TimeLineData = [
 
 export const AcomplishmentsData = [
     { number: 10, text: 'Años de experiencia en desarrollo' },
-    { number: '+50', text: 'Proyectos de transformación digital' },
-    //{ number: 1900, text: 'Github Followers', },
-    //{ number: 5000, text: 'Github Stars', }
+    { number: '+50', text: 'Proyectos de transformación digital' }
 ];
