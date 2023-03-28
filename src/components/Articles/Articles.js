@@ -9,7 +9,7 @@ const Articles = () => {
     const [rssFeed, setRssFeed] = useState();
 
     useEffect(() => {
-        const fetchRssFeed = async () => getRssFeed('jmibarra86', 10);
+        const fetchRssFeed = async () => getRssFeed('jmibarra86', 15);
         fetchRssFeed().then((rssFeed) => rssFeed && setRssFeed(rssFeed));
     }, []);
 
