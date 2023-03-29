@@ -3,7 +3,7 @@ export const projects = [
         title: 'Mis proyectos',
         description: "Podes ver mi repositorío con mis proyectos",
         image: 'images/all-projects.png',
-        tags: ['React', 'Redux', 'Typescript', 'Python'],
+        tags: [],
         source: 'https://github.com/jmibarra',
         visit: 'https://github.com/jmibarra',
         id: 0,
@@ -27,13 +27,22 @@ export const projects = [
         id: 2,
     },
     {
+        title: 'Chatbot Pytorch',
+        description: "Chatbot en Python entrenado con la biblioteca Pytorch",
+        image: 'images/chatbot-project.png',
+        tags: ['Python', 'PyTorch', 'Machine Learning'],
+        source: 'https://github.com/jmibarra/python-pytorch-chatbot',
+        visit: 'https://github.com/jmibarra/python-pytorch-chatbot',
+        id: 3,
+    },
+    {
         title: 'Atlassian Forge CSV Generator',
         description: "Prueba de concepto para permitir generar reportes CSV descargables de Jira utilizando Atlassian Forge y react",
         image: 'images/atlassian-forge.png',
         tags: ['React', 'Atlassian Forge', 'javascript'],
         source: 'https://github.com/jmibarra/forge-csv-generator-demo',
         visit: 'https://github.com/jmibarra/forge-csv-generator-demo',
-        id: 3,
+        id: 4,
     },
     {
         title: 'Portfolio personal',
@@ -42,7 +51,7 @@ export const projects = [
         tags: ['React', 'Next Js', 'javascript'],
         source: 'https://github.com/jmibarra/portfolio-jmi',
         visit: 'https://github.com/jmibarra/portfolio-jmi',
-        id: 4,
+        id: 5,
     },
     {
         title: 'Notas React',
@@ -51,7 +60,7 @@ export const projects = [
         tags: ['React', 'javascript'],
         source: 'https://github.com/jmibarra/react-note-app',
         visit: 'https://github.com/jmibarra/react-note-app',
-        id: 5,
+        id: 6,
     },
     {
         title: 'Crypto finance react app',
@@ -60,7 +69,7 @@ export const projects = [
         tags: ['React', 'javascript', 'API'],
         source: 'https://github.com/jmibarra/crypto-finance-tracker-app',
         visit: 'https://github.com/jmibarra/crypto-finance-tracker-app',
-        id: 6,
+        id: 7,
     },
     {
         title: 'Mis Gastos App',
@@ -69,7 +78,7 @@ export const projects = [
         tags: ['React', 'Firebase', 'API'],
         source: 'https://github.com/jmibarra/gastos-app',
         visit: 'https://github.com/jmibarra/gastos-app',
-        id: 7,
+        id: 8,
     }
 ];
 
