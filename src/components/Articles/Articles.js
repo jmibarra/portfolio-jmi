@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import Image from 'react-bootstrap/Image';
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Img, Tag, TagList, TitleContent, UtilityList } from './ArticlesStyles';
+import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, Img, Tag, TagList, TitleContent, UtilityList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
 const Articles = () => {
     const [rssFeed, setRssFeed] = useState();
