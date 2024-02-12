@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
-import { HeaderThree } from './ArticlesStyles';
+import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Img, Tag, TagList, TitleContent, UtilityList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Articles = () => {
     const [rssFeed, setRssFeed] = useState();
@@ -56,31 +58,27 @@ const Articles = () => {
             </style>
             <SectionDivider />
             <SectionTitle main>Artículos recientes</SectionTitle>
-            <Carousel interval={5000} pause={false} fade={true}>
+            <GridContainer>
                 {rssFeed.articles.map(({ title, thumbnail, link, guid, categories }) => (
-                    <Carousel.Item key={guid}>
-                        <a href={link} target="_blank" rel="noreferrer">
-                            <Image src={thumbnail} alt={title} fluid />
-                        </a>
-                        <Carousel.Caption>
-                            <h2>
-                                <HeaderThree title className="article-title">
-                                    {title}
-                                </HeaderThree>
-                            </h2>
-                            <p>
-                                {categories
-                                    .filter((tag, index) => index < 3)
-                                    .map((tag, i) => (
-                                        <span key={i} className="badge bg-secondary mx-1">
-                                            {tag}
-                                        </span>
-                                    ))}
-                            </p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                    <BlogCard key={guid}>
+                        <TitleContent>
+                            <HeaderThree title>{title}</HeaderThree>
+                            <Hr />
+                        </TitleContent>
+                        {categories.length != 0 && <div>
+                            <TitleContent> Temas </TitleContent>
+                            <TagList>
+                                {categories.filter((tag, index) => index < 3).map((tag, i) => (
+                                    <Tag key={i}>{tag}</Tag>
+                                ))}
+                            </TagList>
+                        </div>}
+                        <UtilityList>
+                            <ExternalLinks href={link} target="_blank"> Visitar </ExternalLinks>
+                        </UtilityList>
+                    </BlogCard>
                 ))}
-            </Carousel>
+            </GridContainer>
         </Section>
     );
 };
