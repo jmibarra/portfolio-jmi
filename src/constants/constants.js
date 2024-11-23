@@ -73,11 +73,11 @@ export const projects = [
     },
     {
         title: 'Mis Gastos App',
-        description: "Aplicación para el manejo de gastos personales",
+        description: "Aplicación para el manejo de gastos personales y finanzas",
         image: 'images/gastos-app.png',
-        tags: ['React', 'Firebase', 'API'],
-        source: 'https://github.com/jmibarra/gastos-app',
-        visit: 'https://github.com/jmibarra/gastos-app',
+        tags: ['React', 'MongoDB', 'API', 'Ant Design'],
+        source: 'https://github.com/jmibarra/gastos-app-next-antd',
+        visit: 'https://github.com/jmibarra/gastos-app-next-antd',
         id: 8,
     }
 ];
