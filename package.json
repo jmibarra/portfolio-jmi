@@ -10,6 +10,7 @@
     "deploy": "next build && next export && touch ./out/.nojekyll && git add out/ && git commit -m \"Deploy gh-pages\" && git push origin `git subtree split --prefix out`:gh-pages --force"
   },
   "dependencies": {
+    "antd": "^5.22.2",
     "bootstrap": "^5.2.3",
     "gh-pages": "^3.2.3",
     "next": "^12.0.2",

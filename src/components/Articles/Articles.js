@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, Img, Tag, TagList, TitleContent, UtilityList } from './ArticlesStyles';
+import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, TagList, TitleContent, UtilityList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
+import { Card, Collapse, Divider, Flex, Tag } from 'antd';
 
 const Articles = () => {
     const [rssFeed, setRssFeed] = useState();
@@ -54,28 +55,30 @@ const Articles = () => {
             </style>
             <SectionDivider />
             <SectionTitle main>Artículos recientes</SectionTitle>
-            <GridContainer>
-                {rssFeed.articles.map(({ title, thumbnail, link, guid, categories }) => (
-                    <BlogCard key={guid}>
-                        <TitleContent>
-                            <HeaderThree title>{title}</HeaderThree>
-                            <Hr />
-                        </TitleContent>
-                        {categories.length != 0 && <div>
-                            <TitleContent> Temas </TitleContent>
-                            <TagList>
-                                {categories.filter((tag, index) => index < 3).map((tag, i) => (
-                                    <Tag key={i}>{tag}</Tag>
-                                ))}
-                            </TagList>
-                        </div>}
-                        <UtilityList>
-                            <ExternalLinks href={link} target="_blank"> Visitar </ExternalLinks>
-                        </UtilityList>
-                    </BlogCard>
+            <Flex gap="middle" vertical>
+                {rssFeed.articles.map(({ title, description, link, guid, categories }) => (
+
+                    <>
+                        {console.log(rssFeed.articles)}
+                        <Card key={guid} title={title} bordered={false}>
+                            <Flex wrap gap="small">
+                                <Collapse
+                                    items={[{ key: '1', label: 'Contenido', children: <div dangerouslySetInnerHTML={{ __html: description }} /> }]}
+
+                                />
+
+                                <Divider>Temas</Divider>
+                                <TagList >
+                                    {categories.map((tag, i) => (
+                                        <Tag key={i}>{tag}</Tag>
+                                    ))}
+                                </TagList>
+                            </Flex>
+                        </Card >
+                    </>
                 ))}
-            </GridContainer>
-        </Section>
+            </Flex>
+        </Section >
     );
 };
 
