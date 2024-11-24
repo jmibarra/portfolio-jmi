@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, TagList, TitleContent, UtilityList } from './ArticlesStyles';
+import { GridContainer, TagList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
 import { Button, Card, Collapse, Descriptions, Divider, Flex, Tag } from 'antd';
-import { SocialIconsContainer } from '../Footer/FooterStyles';
 import { AiFillMediumSquare } from 'react-icons/ai';
 
 const Articles = () => {
@@ -21,7 +20,6 @@ const Articles = () => {
             <SectionDivider />
             <SectionTitle main>Artículos recientes</SectionTitle>
             <GridContainer>
-                {console.log(rssFeed)}
                 {rssFeed.articles.map(({ title, link, guid, categories, pubDate, description }) => (
 
                     <Card key={guid} title={title} extra={<Button icon={<AiFillMediumSquare />} shape="circle" href={link} target='_blank' />} style={{ width: '100%' }}>
