@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { BlogCard, ExternalLinks, GridContainer, HeaderThree, Hr, TagList, TitleContent, UtilityList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
-import { Card, Collapse, Divider, Flex, Tag } from 'antd';
+import { Button, Card, Collapse, Descriptions, Divider, Flex, Tag } from 'antd';
+import { SocialIconsContainer } from '../Footer/FooterStyles';
+import { AiFillMediumSquare } from 'react-icons/ai';
 
 const Articles = () => {
     const [rssFeed, setRssFeed] = useState();
@@ -18,29 +20,22 @@ const Articles = () => {
         <Section nopadding id="articles">
             <SectionDivider />
             <SectionTitle main>Artículos recientes</SectionTitle>
-            <Flex gap="middle" vertical>
-                {rssFeed.articles.map(({ title, description, link, guid, categories }) => (
+            <GridContainer>
+                {console.log(rssFeed)}
+                {rssFeed.articles.map(({ title, link, guid, categories, pubDate, description }) => (
 
-                    <>
-                        {console.log(rssFeed.articles)}
-                        <Card key={guid} title={title} bordered={false}>
-                            <Flex wrap gap="small">
-                                <Collapse
-                                    items={[{ key: '1', label: 'Contenido', children: <div dangerouslySetInnerHTML={{ __html: description }} /> }]}
-
-                                />
-
-                                <Divider>Temas</Divider>
-                                <TagList >
-                                    {categories.map((tag, i) => (
-                                        <Tag key={i}>{tag}</Tag>
-                                    ))}
-                                </TagList>
-                            </Flex>
-                        </Card >
-                    </>
+                    <Card key={guid} title={title} extra={<Button icon={<AiFillMediumSquare />} shape="circle" href={link} target='_blank' />} style={{ width: '100%' }}>
+                        <Descriptions >
+                            <Descriptions.Item label="Fecha de publicación">{pubDate}</Descriptions.Item>
+                        </Descriptions>
+                        <TagList >
+                            {categories.map((tag, i) => (
+                                <Tag key={i} color="blue">{tag}</Tag>
+                            ))}
+                        </TagList>
+                    </Card>
                 ))}
-            </Flex>
+            </GridContainer>
         </Section >
     );
 };
