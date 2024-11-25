@@ -54,15 +54,6 @@ export const projects = [
         id: 5,
     },
     {
-        title: 'Notas React',
-        description: "Web app sencilla para crear notas",
-        image: 'images/react-note-app.png',
-        tags: ['React', 'javascript'],
-        source: 'https://github.com/jmibarra/react-note-app',
-        visit: 'https://github.com/jmibarra/react-note-app',
-        id: 6,
-    },
-    {
         title: 'Crypto finance react app',
         description: "App para el seguimiento de valores de criptomonedas",
         image: 'images/crypto-app.png',

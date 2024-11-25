@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { GridContainer, TagList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
-import { Button, Card, Collapse, Descriptions, Divider, Flex, Tag } from 'antd';
+import { Button, Card, Descriptions, Tag } from 'antd';
 import { AiFillMediumSquare } from 'react-icons/ai';
 
 const Articles = () => {
