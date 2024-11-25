@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { GridContainer, TagList } from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
-import { Button, Card, Descriptions, Tag } from 'antd';
+import { Button, Card, Descriptions, Divider, Tag } from 'antd';
 import { AiFillMediumSquare } from 'react-icons/ai';
 
 const Articles = () => {
@@ -26,11 +26,14 @@ const Articles = () => {
                         <Descriptions >
                             <Descriptions.Item label="Fecha de publicación">{pubDate}</Descriptions.Item>
                         </Descriptions>
-                        <TagList >
-                            {categories.map((tag, i) => (
-                                <Tag key={i} color="blue">{tag}</Tag>
-                            ))}
-                        </TagList>
+                        {categories.length != 0 && <div>
+                            <Divider> Topics </Divider>
+                            <TagList >
+                                {categories.map((tag, i) => (
+                                    <Tag key={i} color="blue">{tag}</Tag>
+                                ))}
+                            </TagList>
+                        </div>}
                     </Card>
                 ))}
             </GridContainer>
