@@ -89,6 +89,7 @@ export const TimeLineData = [
     { year: 2016, text: 'Finalizo la Licenciatura en Informática en UADE', },
     { year: 2017, text: 'Me uno a Activity Consultoría como Líder de equipos y proyectos', },
     { year: 2020, text: 'Asumo la gerencia de Servicios profesionales en Activity Consultoría', },
+    { year: 2021, text: 'Encabezo la certificación de la empresa en la norma ISO 9001:2015', },
 ];
 
 export const AcomplishmentsData = [

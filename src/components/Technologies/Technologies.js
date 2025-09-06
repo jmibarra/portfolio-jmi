@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiAtlassian, DiCreativecommonsBadge, DiDatabase, DiFirebase, DiJava, DiReact, DiScrum, DiZend } from 'react-icons/di';
+import { DiAtlassian, DiDatabase, DiJava, DiReact, DiScrum, DiJavascript } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -19,6 +19,10 @@ const Technologies = () =>  (
                     <ListParagraph>
                         React.js <br/>
                         Redux <br/>
+                        Next.Js <br/>
+                        Javascript <br/>
+                        HTML <br/>  
+                        CSS <br/>
                     </ListParagraph>
                 </ListContainer>
             </ListItem>
@@ -44,6 +48,16 @@ const Technologies = () =>  (
                         Administración de herramientas de la suite Atlassian<br/>
                         Atlassian connect <br/>
                         Atlassian Forge <br/>
+                    </ListParagraph>
+                </ListContainer>
+            </ListItem>
+            <ListItem>
+                <DiJavascript size="3rem" />
+                <ListContainer>
+                    <ListTitle>Service Now</ListTitle>
+                    <ListParagraph>
+                        Service Now Administrator<br/>
+                        Service now Developer <br/>
                     </ListParagraph>
                 </ListContainer>
             </ListItem>

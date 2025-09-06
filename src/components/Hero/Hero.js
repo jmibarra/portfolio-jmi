@@ -12,7 +12,7 @@ const Hero = (props) => (
               Soy Juan Ibarra
           </SectionTitle>
           <SectionText>
-              Licenciado en sistemas de UADE, COO en Activity Consultoría. <br/>
+              Licenciado en sistemas de UADE, Gerente de servicios profesionales en Activity Consultoría. <br/>
               Ademas me especializo en técnicas de productividad personal y gestión de tiempo.
           </SectionText>
           <Button onClick= { () => window.location = '#about' }>Más sobre mí</Button>
