@@ -1,43 +1,71 @@
+// src/components/Articles/Articles.js
+
 import { useEffect, useState } from 'react';
-import { GridContainer, TagList } from './ArticlesStyles';
+import { Button } from 'antd'; // Importamos el botón de Ant Design
+import {
+    ArticleList,
+    ArticleItem,
+    ArticleTitle,
+    ArticleDate,
+    ArticleTagList,
+    ArticleTag,
+    ViewMoreButtonContainer // Importamos el nuevo contenedor
+} from './ArticlesStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { getRssFeed } from '../../services/medium-feed';
-import { Button, Card, Descriptions, Divider, Tag } from 'antd';
-import { AiFillMediumSquare } from 'react-icons/ai';
 
 const Articles = () => {
-    const [rssFeed, setRssFeed] = useState();
+    const [rssFeed, setRssFeed] = useState(null);
 
     useEffect(() => {
-        const fetchRssFeed = async () => getRssFeed('jmibarra86', 15);
-        fetchRssFeed().then((rssFeed) => rssFeed && setRssFeed(rssFeed));
+        const fetchRssFeed = async () => {
+            const feed = await getRssFeed('jmibarra86', 10); 
+            if (feed) {
+                setRssFeed(feed);
+            }
+        };
+        fetchRssFeed();
     }, []);
 
-    if (!rssFeed) return <span>Loading...</span>;
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+    };
+
+    if (!rssFeed) return <span>Loading articles...</span>;
 
     return (
         <Section nopadding id="articles">
             <SectionDivider />
-            <SectionTitle main>Artículos recientes</SectionTitle>
-            <GridContainer>
-                {rssFeed.articles.map(({ title, link, guid, categories, pubDate, description }) => (
-
-                    <Card key={guid} title={title} extra={<Button icon={<AiFillMediumSquare />} shape="circle" href={link} target='_blank' />} style={{ width: '100%' }}>
-                        <Descriptions >
-                            <Descriptions.Item label="Fecha de publicación">{pubDate}</Descriptions.Item>
-                        </Descriptions>
-                        {categories.length != 0 && <div>
-                            <Divider> Topics </Divider>
-                            <TagList >
+            <SectionTitle main>Artículos Recientes</SectionTitle>
+            
+            <ArticleList>
+                {rssFeed.articles.map(({ title, link, guid, categories, pubDate }) => (
+                    <ArticleItem key={guid} href={link} target="_blank" rel="noopener noreferrer">
+                        <ArticleTitle>{title}</ArticleTitle>
+                        <ArticleDate>{formatDate(pubDate)}</ArticleDate>
+                        
+                        {categories.length > 0 && (
+                            <ArticleTagList>
                                 {categories.map((tag, i) => (
-                                    <Tag key={i} color="blue">{tag}</Tag>
+                                    <ArticleTag key={i}>{tag}</ArticleTag>
                                 ))}
-                            </TagList>
-                        </div>}
-                    </Card>
+                            </ArticleTagList>
+                        )}
+                    </ArticleItem>
                 ))}
-            </GridContainer>
-        </Section >
+            </ArticleList>
+            <ViewMoreButtonContainer>
+                <Button 
+                    type="primary" 
+                    shape="round" 
+                    size="large" 
+                    href={rssFeed.feed.link}
+                    target="_blank">
+                    Ver todos mis artículos
+                </Button>
+            </ViewMoreButtonContainer>
+        </Section>
     );
 };
 

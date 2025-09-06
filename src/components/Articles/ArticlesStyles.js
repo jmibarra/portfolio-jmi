@@ -107,3 +107,63 @@ justify-content: space-around;
 padding: 2rem;
 allign-items: center;
 `
+
+export const ArticleList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+`;
+
+export const ArticleItem = styled.a`
+  display: block;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+  }
+`;
+
+export const ArticleTitle = styled.h3`
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+`;
+
+export const ArticleDate = styled.p`
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+`;
+
+export const ArticleTagList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+`;
+
+export const ArticleTag = styled.span`
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+`;
+
+export const ViewMoreButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem; // Espacio por encima del botón
+`;
