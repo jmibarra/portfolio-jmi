@@ -1,115 +1,53 @@
 import styled from 'styled-components';
 
-export const Img = styled.img`
-  width: 100%;
-  object-fit: cover;
-  max-height: 300px; /* establecemos una altura máxima para las tarjetas */
-`;
-
-export const GridContainer = styled.section`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  padding: 3rem;
-  place-items: center;
-  column-gap: 2rem;
-  row-gap: 3rem;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    padding-bottom: 0;
-  }
-`;
-
-export const BlogCard = styled.div`
+export const ProjectCard = styled.div`
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
-  text-align: center;
-  width: 400px;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-  }
-
-  &:nth-child(1) { /* seleccionamos el primer elemento */
-    grid-column: span 2; /* le damos un ancho de 2 columnas */
-  }
-`;
-
-export const TitleContent = styled.div`
-  text-align: center;
-  z-index: 20;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
   width: 100%;
-`;
-
-export const HeaderThree = styled.h3`
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: 0.5rem 0;
-  font-size: ${(props) => (props.title ? '3rem' : '2rem')};
-`;
-
-export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
-  border: 0;
-  background: #d0bb57;
-`;
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
-`;
-
-export const CardInfo = styled.p`
-  width: 100%;
-  padding: 0 50px;
-  color: #e4e6e7;
-  font-style: 2rem;
-  line-height: 24px;
-  text-align: justify;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.3rem;
-  }
-`;
-
-export const UtilityList = styled.ul`
-  list-style-type: none;
-  padding: 0;
+  overflow: hidden;
   display: flex;
-  justify-content: space-around;
-  margin: 2.5rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 `;
 
-
-export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+export const ProjectImage = styled.img`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 `;
 
-export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
-`
-export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
-`
+export const ProjectCardContent = styled.div`
+  padding: 20px;
+  flex-grow: 1;
+`;
+
+export const ProjectTitle = styled.h3`
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+`;
+
+export const ProjectDescription = styled.p`
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+`;
+
+export const ProjectTagList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 20px;
+`;
+
+export const ProjectTag = styled.span`
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+`;
