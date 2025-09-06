@@ -1,14 +1,18 @@
+// src/components/Projects/Projects.js
+
 import React from 'react';
 import Slider from 'react-slick';
 
 import {
     ProjectCard,
+    ProjectImageWrapper,
     ProjectImage,
-    ProjectCardContent,
+    ProjectContentWrapper,
     ProjectTitle,
     ProjectDescription,
     ProjectTagList,
-    ProjectTag
+    ProjectTag,
+    SliderContainer
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
@@ -24,39 +28,50 @@ const Projects = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1, // <-- Cambio principal aquí
+        slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true, // Opcional: para que el carrusel se mueva solo
-        autoplaySpeed: 3000, // Opcional: cambia de slide cada 3 segundos
+        autoplay: true,
+        autoplaySpeed: 4000,
     };
 
     return (
         <Section nopadding id="projects">
             <SectionDivider />
             <SectionTitle main> Proyectos </SectionTitle>
-            <div style={{ padding: '0 20px' }}>
+            {/* Usamos nuestro nuevo contenedor para el slider */}
+            <SliderContainer>
                 <Slider {...settings}>
                     {projects.map(({ id, image, title, description, tags, visit }) => (
-                        <div key={id} style={{ padding: '0 15px' }}>
+                        <div key={id}>
                             <ProjectCard>
-                                <ProjectImage src={image} />
-                                <ProjectCardContent>
-                                    <ProjectTitle>{title}</ProjectTitle>
-                                    <ProjectDescription>{description}</ProjectDescription>
-                                </ProjectCardContent>
-                                <ProjectTagList>
-                                    {tags.map((tag, i) => (
-                                        <ProjectTag key={i}>{tag}</ProjectTag>
-                                    ))}
-                                </ProjectTagList>
-                                <div style={{ padding: '20px', textAlign: 'right' }}>
-                                    <Button icon={<AiFillGithub />} shape="circle" href={visit} target='_blank' />
-                                </div>
+                                <ProjectImageWrapper>
+                                    <ProjectImage src={image} />
+                                </ProjectImageWrapper>
+
+                                <ProjectContentWrapper>
+                                    {/* Contenedor para la parte superior (título y descripción) */}
+                                    <div>
+                                        <ProjectTitle>{title}</ProjectTitle>
+                                        <ProjectDescription>{description}</ProjectDescription>
+                                    </div>
+
+                                    {/* Contenedor para la parte inferior (tags y botón) */}
+                                    <div>
+                                        <ProjectTagList>
+                                            {tags.map((tag, i) => (
+                                                <ProjectTag key={i}>{tag}</ProjectTag>
+                                            ))}
+                                        </ProjectTagList>
+                                        <div style={{ marginTop: '25px', textAlign: 'right' }}>
+                                            <Button icon={<AiFillGithub />} shape="circle" href={visit} target='_blank' />
+                                        </div>
+                                    </div>
+                                </ProjectContentWrapper>
                             </ProjectCard>
                         </div>
                     ))}
                 </Slider>
-            </div>
+            </SliderContainer>
         </Section>
     );
 }
