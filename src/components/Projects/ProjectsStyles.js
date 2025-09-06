@@ -112,7 +112,7 @@ export const IntroImage = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   border: 4px solid #f0f0f0;
 `;
 

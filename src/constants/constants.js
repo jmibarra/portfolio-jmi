@@ -18,13 +18,22 @@ export const projects = [
         id: 1,
     },
     {
+        title: 'Mis conversaciones de Gemini',
+        description: "Addon de chrome para agrupar conversaciones de Gemini en carpetas",
+        image: 'images/gemini-conversation-app.png',
+        tags: ['JavaScript'],
+        source: 'https://github.com/jmibarra/gemini-conversation-folders-addon',
+        visit: 'https://github.com/jmibarra/gemini-conversation-folders-addon',
+        id: 2,
+    },
+    {
         title: 'SnakeIA - Reinforcement learning',
         description: "Entrenamiento por refuerzo para aprendizaje del juego Snake",
         image: 'images/snake_ia_project.png',
         tags: ['Python', 'Reinforcement Learning', 'AI', 'PyTorch'],
         source: 'https://github.com/jmibarra/reinforcement-learning-ia-snake',
         visit: 'https://github.com/jmibarra/reinforcement-learning-ia-snake',
-        id: 2,
+        id: 3,
     },
     {
         title: 'Chatbot Pytorch',
@@ -33,7 +42,7 @@ export const projects = [
         tags: ['Python', 'PyTorch', 'Machine Learning'],
         source: 'https://github.com/jmibarra/python-pytorch-chatbot',
         visit: 'https://github.com/jmibarra/python-pytorch-chatbot',
-        id: 3,
+        id: 4,
     },
     {
         title: 'Atlassian Forge CSV Generator',
@@ -42,7 +51,7 @@ export const projects = [
         tags: ['React', 'Atlassian Forge', 'javascript'],
         source: 'https://github.com/jmibarra/forge-csv-generator-demo',
         visit: 'https://github.com/jmibarra/forge-csv-generator-demo',
-        id: 4,
+        id: 5,
     },
     {
         title: 'Portfolio personal',
@@ -51,7 +60,7 @@ export const projects = [
         tags: ['React', 'Next Js', 'javascript'],
         source: 'https://github.com/jmibarra/portfolio-jmi',
         visit: 'https://github.com/jmibarra/portfolio-jmi',
-        id: 5,
+        id: 6,
     },
     {
         title: 'Crypto finance react app',
@@ -71,6 +80,7 @@ export const projects = [
         visit: 'https://github.com/jmibarra/gastos-app-next-antd',
         id: 8,
     }
+
 ];
 
 export const TimeLineData = [
@@ -78,10 +88,10 @@ export const TimeLineData = [
     { year: 2011, text: 'Comienzo como Software Engineer en Mercado Libre.', },
     { year: 2016, text: 'Finalizo la Licenciatura en Informática en UADE', },
     { year: 2017, text: 'Me uno a Activity Consultoría como Líder de equipos y proyectos', },
-    { year: 2020, text: 'COO en Activity Consultoría', },
+    { year: 2020, text: 'Asumo la gerencia de Servicios profesionales en Activity Consultoría', },
 ];
 
 export const AcomplishmentsData = [
-    { number: 10, text: 'Años de experiencia en desarrollo' },
-    { number: '+50', text: 'Proyectos de transformación digital' }
+    { number: 15, text: 'Años de experiencia en desarrollo' },
+    { number: '+70', text: 'Proyectos de transformación digital' }
 ];
