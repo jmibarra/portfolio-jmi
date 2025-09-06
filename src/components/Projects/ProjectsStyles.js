@@ -90,3 +90,36 @@ export const ProjectContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
+
+export const IntroSection = styled.div`
+  max-width: 950px;
+  margin: 0 auto 40px auto; // Centrado y con margen inferior
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 30px; // Espacio entre la imagen y el texto
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+export const IntroImage = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+`;
+
+export const IntroText = styled.p`
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+  flex: 1; // Permite que el texto ocupe el espacio restante
+`;

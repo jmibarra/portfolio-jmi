@@ -12,14 +12,16 @@ import {
     ProjectDescription,
     ProjectTagList,
     ProjectTag,
-    SliderContainer
+    SliderContainer,
+    IntroSection,
+    IntroImage,
+    IntroText
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 import { Button } from 'antd';
 import { AiFillGithub } from 'react-icons/ai';
 
-// Importa los estilos de slick-carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -34,28 +36,40 @@ const Projects = () => {
         autoplaySpeed: 4000,
     };
 
+    const introData = projects[0];
+    const carouselProjects = projects.slice(1);
+
     return (
         <Section nopadding id="projects">
             <SectionDivider />
             <SectionTitle main> Proyectos </SectionTitle>
+            <IntroSection>
+                <IntroImage src={introData.image} />
+                <IntroText>{introData.description}</IntroText>
+                <Button 
+                    type="primary" 
+                    shape="round" 
+                    icon={<AiFillGithub />} 
+                    size="large" 
+                    href={introData.visit} 
+                    target="_blank">
+                    Mi GitHub
+                </Button>
+            </IntroSection>
             {/* Usamos nuestro nuevo contenedor para el slider */}
             <SliderContainer>
                 <Slider {...settings}>
-                    {projects.map(({ id, image, title, description, tags, visit }) => (
+                    {carouselProjects.map(({ id, image, title, description, tags, visit }) => (
                         <div key={id}>
                             <ProjectCard>
                                 <ProjectImageWrapper>
                                     <ProjectImage src={image} />
                                 </ProjectImageWrapper>
-
                                 <ProjectContentWrapper>
-                                    {/* Contenedor para la parte superior (título y descripción) */}
                                     <div>
                                         <ProjectTitle>{title}</ProjectTitle>
                                         <ProjectDescription>{description}</ProjectDescription>
                                     </div>
-
-                                    {/* Contenedor para la parte inferior (tags y botón) */}
                                     <div>
                                         <ProjectTagList>
                                             {tags.map((tag, i) => (
